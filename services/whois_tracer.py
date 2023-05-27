@@ -72,7 +72,7 @@ class WhoisTracer:
         Анализирует полученные данные whois и заполняет соответствующие поля атрибута whois_info.
         :param raw_data:
         """
-        decoded_data = raw_data.decode().lower()
+        decoded_data = raw_data.decode(errors='ignore').lower()
         for el in WHOIS_HEADERS:
             if el in decoded_data:
                 ind = decoded_data.index(el)
