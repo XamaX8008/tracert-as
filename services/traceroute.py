@@ -22,7 +22,11 @@ class Traceroute:
     whois_tracer: Экземпляр WhoisTracer для получения информации whois о промежуточных узлах.
     """
     def __init__(self, host: str, max_ttl: int):
-        self._host = socket.gethostbyname(host)
+        try:
+            self._host = socket.gethostbyname(host)
+        except socket.gaierror:
+            print(f"{host} is invalid!")
+            exit(1)
         self.max_ttl = max_ttl
         self.ttl = 1
         self.whois_tracer = WhoisTracer()
