@@ -2,8 +2,8 @@ import socket
 
 from typing import List
 
-from packets.icmp_packet import IcmpPacket
-from packets.whois_record import WhoisRecord
+from icmp_packet import IcmpPacket
+from whois_record import WhoisRecord
 from whois_tracer import WhoisTracer
 
 

@@ -1,6 +1,6 @@
 import socket
 
-from packets.whois_record import WhoisRecord
+from whois_record import WhoisRecord
 
 PRIMARY_IANA_ADDRESS = "whois.iana.org"
 CHUNK_SIZE = 1024
